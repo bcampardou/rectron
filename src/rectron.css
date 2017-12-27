@@ -1,0 +1,96 @@
+body {
+  margin:0;
+}
+.container {  
+  position:absolute;
+  top:5px;bottom:5px;left:0;right:0;
+  margin:10px;
+  color: #37474f;
+  font-family: monospace;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  -webkit-flex-direction: column;
+}
+.row {
+  padding-top:5px;
+  padding-bottom:5px;
+  display:block;
+  width:100%;
+  text-align: center;
+}
+
+.header-container {
+  position:absolute;
+  top:5px;
+  left:0;
+  right:0;
+  height:160px;
+  background: #090f13;
+  color: #ffffff;
+  border-radius: 5px 5px 0 0;
+  -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,.4);
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,.4);
+  -o-box-shadow: 5px 5px 10px 0px rgba(0,0,0,.4);
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,.4);
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=rgba(0,0,0,.4), Direction=134, Strength=10);
+}
+.controls-container {
+  position:absolute;
+  top:160px;
+  left:0;
+  right:0;
+  bottom:5px;
+  background-color: #ffffff;
+  color: #37474f;
+  border-radius: 0 0 5px 5px;
+  -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,.4);
+-webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,.4);
+-o-box-shadow: 5px 5px 10px 0px rgba(0,0,0,.4);
+box-shadow: 5px 5px 10px 0px rgba(0,0,0,.4);
+filter:progid:DXImageTransform.Microsoft.Shadow(color=rgba(0,0,0,.4), Direction=134, Strength=10);
+}
+.ck-button {
+  display:inline-block;
+}
+.ck-button.disabled, button:disabled {
+  color: rgba(255, 255, 255, 0.733);
+}
+.ck-button, button {
+  overflow:auto;
+  color: #37474f;
+  border: 0;
+  max-width: 50px;
+  max-height: 50px;
+  padding: 10px;
+  background: transparent;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ck-button:hover, button:hover {
+  color: #29759b;
+}
+
+.ck-button input {
+  position:absolute;
+  top: -20px;
+}
+
+button:focus {
+  outline: none;
+  color:#28b7ff;
+}
+
+.ck-button.active {
+  color: #28b7ff;
+}
+
+video {
+  width:calc(100% - 20px);
+  margin:10px;
+}
