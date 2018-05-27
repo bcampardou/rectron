@@ -22,12 +22,12 @@
     "rectron": "./launch.js"
   },
   "devDependencies": {
-    "electron-packager": "^11.0.1",
+    "electron-packager": "^12.1.0",
     "electron-prebuilt": "^1.4.13"
   },
   "dependencies": {
     "domify": "^1.4.0",
-    "electron": "^1.8.2",
+    "electron": "^2.0.2",
     "menubar": "^5.2.3"
   }
 }
