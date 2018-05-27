@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // document.querySelector('#system-audio').addEventListener('click', sysAudioCheck)
   document.querySelector('#record-stop').addEventListener('click', stopRecording)
   document.querySelector('#play-button').addEventListener('click', play)
-  document.querySelector('#download-button').addEventListener('click', download)
+  document.querySelector('#download-button').addEventListener('click', showTypeButtons)//download)
 })
 
 const playVideo = () => {
@@ -25,6 +25,7 @@ const playVideo = () => {
     console.log(filename)
     let video = document.querySelector('video')
     video.muted = false
+    video.controls = true
     video.src = filename
   })
 }
@@ -43,6 +44,13 @@ const enableButtons = () => {
   document.querySelector('#record-stop').hidden = true
   document.querySelector('#play-button').hidden = true
   document.querySelector('#download-button').hidden = true
+}
+
+const showTypeButtons = () => {
+  document.querySelector('#media-type-container').classList.add('show');
+}
+const hideMediaTypeContainer = () => {
+  document.querySelector('#media-type-container').classList.remove('show');
 }
 
 const microAudioCheck = () => {
@@ -124,22 +132,23 @@ const play = () => {
   let video = document.querySelector('video')
   video.controls = true;
   video.muted = false
-  let blob = new Blob(recordedChunks, {type: 'video/webm'})
+  let blob = new Blob(recordedChunks, {type: 'video/webm;codecs=h264'})
   video.src = window.URL.createObjectURL(blob)
 }
 
-const download = () => {
-  let blob = new Blob(recordedChunks, {type: 'video/webm'})
+const download = (mimeType, extension) => {
+  let blob = new Blob(recordedChunks, {type: mimeType})
   let url = URL.createObjectURL(blob)
   let a = document.createElement('a')
   document.body.appendChild(a)
   a.style = 'display: none'
   a.href = url
-  a.download = 'electron-screen-recorder.webm'
+  a.download = 'electron-screen-recorder.' + extension;
   a.click()
   setTimeout(function () {
     document.body.removeChild(a)
     window.URL.revokeObjectURL(url)
+    hideMediaTypeContainer()
   }, 100)
 }
 

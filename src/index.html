@@ -37,6 +37,13 @@
                 <button id="play-button" hidden="true"><i class="ti-control-play" title="Play Recording"></i></button>
                 <button id="download-button" hidden="true"><i class="ti-save-alt" title="Save Video (webm)"></i></button>
             </div>
+            <div id="media-type-container" class="media-type-container">
+                <div class="media-type-header">
+                    <button class="close-button" onclick="hideMediaTypeContainer()"><i class="ti-close"></i></button>
+                </div>
+                <button class="filetype-button" onclick="download('video/mp4', 'mp4')">mp4</button>
+                <button class="filetype-button" onclick="download('video/webm;codecs=h264', 'webm')">webm</button>
+            </div>
         </div>
     </div>
 </body>

@@ -50,11 +50,49 @@ body {
 box-shadow: 5px 5px 10px 0px rgba(0,0,0,.4);
 filter:progid:DXImageTransform.Microsoft.Shadow(color=rgba(0,0,0,.4), Direction=134, Strength=10);
 }
+.media-type-container {
+  display:none;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  z-index:999;
+  background-color:white;
+  text-align: center;
+}
+.media-type-container.show {
+  display:block;
+}
+.media-type-container.show .media-type-header {
+  height:15px;
+  width:100%;
+}
+.media-type-container.show .media-type-header .close-button {
+  float:right;
+  margin-right:5px;
+  margin-top:5px;
+  font-size:10px;
+  cursor:pointer;
+}
+.media-type-container.show .filetype-button {
+  text-align: center;
+  text-transform: uppercase;
+  width:50px;
+  height:50px;
+  padding:10px;
+  border-radius:50%;
+  margin:20px 10px 10px 10px;
+  font-size:10px;
+  color:#37474f;
+  border: 1px solid #37474f;
+  cursor:pointer;
+}
 .ck-button {
   display:inline-block;
 }
 .ck-button.disabled, button:disabled {
-  color: rgba(255, 255, 255, 0.733);
+  color: rgba(0,0,0, 0.2);
 }
 .ck-button, button {
   overflow:auto;

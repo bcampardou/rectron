@@ -1,7 +1,7 @@
 {
   "name": "rectron",
   "description": "Screen Recorder built with javascript and electron",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Béranger Campardou (BaobabCoder)",
   "license": "MIT",
   "keywords": [
@@ -22,12 +22,12 @@
     "rectron": "./launch.js"
   },
   "devDependencies": {
-    "electron-packager": "^10.1.0",
+    "electron-packager": "^11.0.1",
     "electron-prebuilt": "^1.4.13"
   },
   "dependencies": {
     "domify": "^1.4.0",
-    "electron": "1.7.10",
+    "electron": "^1.8.2",
     "menubar": "^5.2.3"
   }
 }
